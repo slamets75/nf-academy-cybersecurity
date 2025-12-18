@@ -141,11 +141,45 @@
       color: var(--blue);
       font-weight: 600;
     }
-  </style></head>
+      
+    /* Cyber Glow Logo */
+    .logo-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    .logo-cyber {
+      max-width: 180px;
+      width: 100%;
+      height: auto;
+      filter:
+        drop-shadow(0 0 6px rgba(0, 155, 223, 0.8))
+        drop-shadow(0 0 14px rgba(0, 155, 223, 0.6))
+        drop-shadow(0 0 28px rgba(255, 131, 0, 0.35));
+      animation: cyberGlow 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes cyberGlow {
+      0% {
+        filter:
+          drop-shadow(0 0 6px rgba(0, 155, 223, 0.7))
+          drop-shadow(0 0 14px rgba(0, 155, 223, 0.5))
+          drop-shadow(0 0 24px rgba(255, 131, 0, 0.25));
+      }
+      100% {
+        filter:
+          drop-shadow(0 0 10px rgba(0, 155, 223, 1))
+          drop-shadow(0 0 26px rgba(0, 155, 223, 0.8))
+          drop-shadow(0 0 40px rgba(255, 131, 0, 0.45));
+      }
+    }
+
+</style></head>
 <body>
   <div class="container">
-    <header style="margin-bottom:40px; display:flex; justify-content:center;">
-      <img src="logo.png" alt="NF Academy Logo" style="max-width:160px; width:100%; height:auto;" />
+    <header class="logo-wrapper">
+      <img src="logo.png" alt="NF Academy Logo" class="logo-cyber" />
     </header>
     <div class="badge">🚧 COMING SOON</div><h1>
   <span class="blue">Cybersecurity</span><br />
